@@ -48,7 +48,7 @@ export const App = () => {
   const [sortingType, setSortingType] = useState<SortField | null>(null);
   const [reversedState, setReversedState] = useState(false);
   let visibleGoods = getPreparedGoods(goodsFromServer, sortingType);
-  const reset = () => {
+  const resetStates = () => {
     setSortingType(null);
     setReversedState(false);
   };
@@ -94,7 +94,7 @@ export const App = () => {
           <button
             type="button"
             className="button is-danger is-light"
-            onClick={reset}
+            onClick={resetStates}
           >
             Reset
           </button>
